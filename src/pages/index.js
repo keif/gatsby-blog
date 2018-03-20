@@ -1,24 +1,35 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Helmet from "react-helmet"
+import React from 'react';
+import Link from 'gatsby-link';
+import Helmet from "react-helmet";
+import styled from "styled-components";
 
+
+const Header = styled.div`
+  background: red;
+  margin-bottom: 1.45rem;
+  height: 100px;
+  width: 100%;
+`;
 
 const IndexPage = ({data}) => (
   <div>
+    <Header>
+      <ul>
+        {data.allMarkdownRemark.edges.map(post => (
+          <li key = {post.node.id}>
+            <Link
+              key = {post.node.id}
+              to = {post.node.frontmatter.path} >
+              {post.node.frontmatter.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </Header>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <ul>
-      {data.allMarkdownRemark.edges.map(post => (
-        <li>
-          <Link
-            key = {post.node.id}
-            to = {post.node.frontmatter.path} >
-            {post.node.frontmatter.title}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    
   </div>
 )
 
