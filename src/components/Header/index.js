@@ -10,20 +10,22 @@ const MainHeader = styled.section`
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1200px;
   padding: 1.45rem 1.0875rem;
 `;
 
-const Logo = styled.h1`
+const Logo = styled.a`
   color: white;
   text-decoration: none;
   margin-bottom: 0;
+  font-weight: bold;
+  font-size: 2.25rem;
 `;
 
 const Header = () => (
  <MainHeader>
   <Wrapper>
-    <Logo>Gatsby</Logo>
+    <Logo href='/'>Gatsby</Logo>
   </Wrapper>
  </MainHeader>
 )
