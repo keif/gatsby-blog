@@ -24,29 +24,30 @@ const Title = styled.h1`
 `
 
 const Blog = styled.div`
-	display: flex;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-column: 3;
+	grid-gap: 30px;
 	list-style: none;
-	margin: 0 -1em;
 	@media (max-width: 768px) {
-		flex-direction: column;
+		grid-template-columns: auto;
 	}
-	span {
-		font-size: 0.8em;
-	}
-	li {
-		display: flex;
-		flex-direction: column;
-		margin: 0 1em;
-		@media (max-width: 768px) {
-			margin: 1em;
-		}
-	}
-	a {
-		margin: 0 0 0.5em;
-		font-size: 1.5rem;
-		color: #fb5235;
-		font-weight: bold;
-	}
+`
+
+const BlogItem = styled.li`
+	display: flex;
+	flex-direction: column;
+`
+
+const BlogDate = styled.span`
+	font-size: 0.8em;
+`
+
+const BlogTitle = styled.a`
+	margin: 0 0 0.5em;
+	font-size: 1.5rem;
+	color: #fb5235;
+	font-weight: bold;
 `
 
 const IndexPage = ({ data }) => (
@@ -55,13 +56,13 @@ const IndexPage = ({ data }) => (
 		<Header>
 			<Blog>
 				{data.allMarkdownRemark.edges.map(post => (
-					<li key={post.node.id}>
-						<span>{post.node.frontmatter.date}</span>
-						<Link key={post.node.id} to={post.node.frontmatter.path}>
+					<BlogItem key={post.node.id}>
+						<BlogDate>{post.node.frontmatter.date}</BlogDate>
+						<BlogTitle key={post.node.id} href={post.node.frontmatter.path}>
 							{post.node.frontmatter.title}
-						</Link>
+						</BlogTitle>
 						<p>{post.node.excerpt}</p>
-					</li>
+					</BlogItem>
 				))}
 			</Blog>
 		</Header>
