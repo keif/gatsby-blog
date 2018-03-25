@@ -50,6 +50,25 @@ const BlogTitle = styled.a`
 	font-weight: bold;
 `
 
+const AllPosts = styled.a`
+	color: #fb5235;
+	float: right;
+	padding: 5px 10px 5px 5px;
+	border: 1px solid transparent;
+	transition: all 0.5s ease-in;
+	background: transparent;
+	&:hover {
+		border: 1px solid #fb5235;
+	}
+	&:before {
+		content: '→';
+		font-size: 25px;
+		display: inline-block;
+		color: #fb5235;
+		padding-right: 0.5em;
+	}
+`
+
 const IndexPage = ({ data }) => (
 	<div>
 		<Title>Latest blog posts</Title>
@@ -66,6 +85,7 @@ const IndexPage = ({ data }) => (
 				))}
 			</Blog>
 		</Header>
+		<AllPosts href="/blog">Read all posts</AllPosts>
 	</div>
 )
 
