@@ -57,6 +57,8 @@ const AllPosts = styled.a`
 	border: 1px solid transparent;
 	transition: all 0.5s ease-in;
 	background: transparent;
+	overflow: hidden;
+	position: relative;
 	&:hover {
 		border: 1px solid #fb5235;
 	}
@@ -66,6 +68,21 @@ const AllPosts = styled.a`
 		display: inline-block;
 		color: #fb5235;
 		padding-right: 0.5em;
+	}
+
+	.mask {
+		position: absolute;
+		display: block;
+		width: 200px;
+		height: 100px;
+		-webkit-transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+		transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+		transition: all 3s cubic-bezier(0.19, 1, 1, 1);
+	}
+	&:hover .mask {
+		background: rgba(251, 82, 53, 0.7);
+		-webkit-transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+		transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
 	}
 `
 
@@ -85,7 +102,10 @@ const IndexPage = ({ data }) => (
 				))}
 			</Blog>
 		</Header>
-		<AllPosts href="/blog">Read all posts</AllPosts>
+		<AllPosts href="/blog">
+			Read all posts
+			<div className="mask" />
+		</AllPosts>
 	</div>
 )
 
