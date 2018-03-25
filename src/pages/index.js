@@ -77,10 +77,10 @@ const AllPosts = styled.a`
 		height: 100px;
 		-webkit-transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
 		transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-		transition: all 3s cubic-bezier(0.19, 1, 1, 1);
+		transition: all 3s cubic-bezier(0.19, 1, 0.8, 1);
 	}
 	&:hover .mask {
-		background: rgba(251, 82, 53, 0.7);
+		background: rgba(251, 82, 53, 0.3);
 		-webkit-transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
 		transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
 	}
