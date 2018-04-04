@@ -23,6 +23,34 @@ const Title = styled.h1`
 	}
 `
 
+const Intro = styled.section`
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	a {
+		align-self: flex-start;
+	}
+`
+
+const IntroHeading = styled.h1`
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		background-color: #fb5235;
+		width: 1.2em;
+		height: 0.05em;
+		bottom: 0.2em;
+		left: -1.5em;
+	}
+`
+const IntroText = styled.p`
+	max-width: 700px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
+`
+
 const Blog = styled.div`
 	display: grid;
 	grid-template-columns: auto auto auto;
@@ -88,6 +116,16 @@ const AllPosts = styled.a`
 
 const IndexPage = ({ data }) => (
 	<div>
+		<Intro>
+			<IntroHeading>FRONTEND DEVELOPER</IntroHeading>
+			<IntroText>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</IntroText>
+			<AllPosts href="/about">
+				Read more
+			<div className="mask" />
+			</AllPosts>
+		</Intro>
 		<Title>Latest blog posts</Title>
 		<Header>
 			<Blog>
