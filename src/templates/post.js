@@ -3,8 +3,13 @@ import Helmet from 'react-helmet'
 
 export default function Template({ data }) {
 	const { markdownRemark: post } = data
+
+	const blogPage = {
+		margin: '0 auto'
+	}
+
 	return (
-		<div>
+		<div style={blogPage}>
 			<h1>{post.frontmatter.title}</h1>
 			<div dangerouslySetInnerHTML={{ __html: post.html }} />
 		</div>

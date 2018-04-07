@@ -24,10 +24,11 @@ const Title = styled.h1`
 `
 
 const Intro = styled.section`
-	height: 400px;
+	min-height: 400px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin: 2.5rem 0;
 	a {
 		align-self: flex-start;
 	}
@@ -87,30 +88,12 @@ const AllPosts = styled.a`
 	background: transparent;
 	overflow: hidden;
 	position: relative;
-	&:hover {
-		border: 1px solid #fb5235;
-	}
 	&:before {
 		content: '→';
 		font-size: 25px;
 		display: inline-block;
 		color: #fb5235;
 		padding-right: 0.5em;
-	}
-
-	.mask {
-		position: absolute;
-		display: block;
-		width: 200px;
-		height: 100px;
-		-webkit-transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-		transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-		transition: all 3s cubic-bezier(0.19, 1, 0.8, 1);
-	}
-	&:hover .mask {
-		background: rgba(251, 82, 53, 0.3);
-		-webkit-transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
-		transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
 	}
 `
 
@@ -123,7 +106,6 @@ const IndexPage = ({ data }) => (
 			</IntroText>
 			<AllPosts href="/about">
 				Read more
-			<div className="mask" />
 			</AllPosts>
 		</Intro>
 		<Title>Latest blog posts</Title>
@@ -142,7 +124,6 @@ const IndexPage = ({ data }) => (
 		</Header>
 		<AllPosts href="/blog">
 			Read all posts
-			<div className="mask" />
 		</AllPosts>
 	</div>
 )

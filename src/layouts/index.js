@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
-import './index.scss'
 
 const TemplateWrapper = ({ children }) => (
 	<div>
@@ -18,7 +17,7 @@ const TemplateWrapper = ({ children }) => (
 		<div
 			style={{
 				margin: '2rem auto',
-				maxWidth: 1200,
+				maxWidth: 960,
 				padding: '0 1.0875rem 1.45rem',
 				paddingTop: 0,
 			}}

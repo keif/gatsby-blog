@@ -15,11 +15,9 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        fonts: [
-          `Roboto\:400:700`
-        ]
+        pathToConfigModule: `src/utils/typography.js`
       }
     }
   ],

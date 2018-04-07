@@ -5,17 +5,11 @@ import styled from 'styled-components'
 const MainHeader = styled.section`
 	background: white;
 	margin-bottom: 1.45rem;
-	.sticky {
-		width: 100%;
-		position: fixed;
-		top: 0;
-		z-index: 1;
-	}
 `
 
 const Wrapper = styled.div`
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 960px;
 	padding: 1.45rem 1.0875rem;
 	display: flex;
 	justify-content: space-between;
@@ -28,6 +22,10 @@ const Logo = styled.a`
 	margin-bottom: 0;
 	font-weight: bold;
 	font-size: 2.25rem;
+	transition: color .2s ease-in;
+	&:hover {
+		color: #fb5235;
+	}
 `
 
 const Navigation = styled.ul`
@@ -41,7 +39,7 @@ const NavigationItem = styled.li`
 `
 
 const NavigationLink = styled.a`
-	color: black;
+	color: #fb5235;
 `
 
 const Header = () => (
