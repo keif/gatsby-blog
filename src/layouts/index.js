@@ -5,25 +5,28 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 
 const TemplateWrapper = ({ children }) => (
-	<div>
+	<div
+		style={{
+			display: 'grid',
+			height: '100vh',
+			gridTemplateColumns: '80px 1fr',
+		}}
+	>
 		<Helmet
-			title="Gatsby Default Starter"
+			title="Stefan Ivić - Portfolio"
 			meta={[
-				{ name: 'description', content: 'Sample' },
-				{ name: 'keywords', content: 'sample, something' },
+				{ name: 'description', content: 'Stefan Ivić - Portfolio' },
+				{
+					name: 'keywords',
+					content:
+						'front-end, design, developer, minimal, gatsby, stefan, ivic, ivić',
+				},
 			]}
-		/>
-		<Header />
-		<div
-			style={{
-				margin: '2rem auto',
-				maxWidth: 960,
-				padding: '0 1.0875rem 1.45rem',
-				paddingTop: 0,
-			}}
 		>
-			{children()}
-		</div>
+			<html lang="en" />
+		</Helmet>
+		<Header />
+		<div>{children()}</div>
 	</div>
 )
 

@@ -1,59 +1,36 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
+import logo from '../../assets/logo.svg'
 
 const MainHeader = styled.section`
-	background: white;
-	margin-bottom: 1.45rem;
+	background: #dd390f;
 `
 
 const Wrapper = styled.div`
-	margin: 0 auto;
 	max-width: 960px;
-	padding: 1.45rem 1.0875rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 `
 
 const Logo = styled.a`
-	color: black;
-	text-decoration: none;
-	margin-bottom: 0;
-	font-weight: bold;
-	font-size: 2.25rem;
-	transition: color .2s ease-in;
-	&:hover {
-		color: #fb5235;
-	}
-`
-
-const Navigation = styled.ul`
-	list-style: none;
-	margin: 0;
+	width: 100%;
 	display: flex;
-`
-
-const NavigationItem = styled.li`
-	margin: 0 10px;
-`
-
-const NavigationLink = styled.a`
-	color: #fb5235;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 30px;
+		height: 20px;
+		margin: 60px 0;
+	}
 `
 
 const Header = () => (
 	<MainHeader>
 		<Wrapper>
-			<Logo href="/">si.</Logo>
-			<Navigation>
-				<NavigationItem>
-					<NavigationLink href="/about">About</NavigationLink>
-				</NavigationItem>
-				<NavigationItem>
-					<NavigationLink href="/blog">Blog</NavigationLink>
-				</NavigationItem>
-			</Navigation>
+			<Logo href="/">
+				<img src={logo} alt="Logo" />
+			</Logo>
 		</Wrapper>
 	</MainHeader>
 )
