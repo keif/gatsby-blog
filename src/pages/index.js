@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Navigation from '../components/Navigation'
 
 const Intro = styled.section`
-	max-height: 535px;
+	max-height: 450px;
 	padding-left: 100px;
 	display: flex;
 	flex-direction: column;
