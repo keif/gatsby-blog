@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => (
 		style={{
 			display: 'grid',
 			height: '100vh',
-			gridTemplateColumns: '80px 1fr',
+			gridTemplateColumns: '60px 1fr',
 		}}
 	>
 		<Helmet

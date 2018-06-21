@@ -1,7 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import Navigation from '../components/Navigation'
 
 const Header = styled.div`
 	margin: 1.45rem 0;
@@ -12,15 +11,6 @@ const Header = styled.div`
 const Title = styled.h1`
 	font-weight: normal;
 	position: relative;
-	&:after {
-		content: '';
-		position: absolute;
-		background-color: #fb5235;
-		width: 1.2em;
-		height: 0.05em;
-		bottom: 0.2em;
-		left: -1.5em;
-	}
 `
 
 const Blog = styled.div`
@@ -29,6 +19,7 @@ const Blog = styled.div`
 	grid-column: 3;
 	grid-gap: 10px;
 	list-style: none;
+	max-width: 960px;
 `
 
 const BlogItem = styled.li`
@@ -48,7 +39,12 @@ const BlogTitle = styled.a`
 `
 
 const BlogPage = ({ data }) => (
-	<div>
+	<div
+		style={{
+			paddingLeft: '100px',
+		}}
+	>
+		<Navigation />
 		<Title>Blog posts</Title>
 		<Header>
 			<Blog>
