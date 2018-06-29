@@ -8,6 +8,9 @@ const Intro = styled.section`
 	a {
 		align-self: flex-start;
 	}
+	@media (max-width: 1200px) {
+		padding: 0 15px;
+	}
 `
 
 const IntroHeading = styled.h1`

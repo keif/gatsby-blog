@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Intro from '../components/Intro'
+import Link from 'gatsby-link'
 
 const Featured = styled.section`
 	width: 100%;
@@ -47,10 +48,6 @@ const FeaturedContent = styled.div`
 	@media (max-width: 780px) {
 		max-width: 100%;
 	}
-
-	a {
-		color: #dd390f;
-	}
 	h2 {
 		margin-bottom: 0;
 		max-width: 100%;
@@ -77,6 +74,10 @@ const FeaturedContent = styled.div`
 		letter-spacing: 1px;
 		cursor: pointer;
 	}
+`
+
+const FeaturedLink = styled(Link)`
+	color: #dd390f;
 `
 
 const FeaturedText = styled.div`
@@ -112,7 +113,7 @@ const FeaturedImage = styled.div`
 	}
 `
 
-const AllPosts = styled.a`
+const AllPosts = styled(Link)`
 	color: #dd390f;
 	border: 1px solid transparent;
 	transition: all 0.5s ease-in;
@@ -137,14 +138,14 @@ const IndexPage = ({ data }) => (
 					Once a month I will publish a featured article. These articles will
 					usually tackle subjects I find more meaningful and important.
 				</p>
-				<AllPosts href="/blog">Read more articles</AllPosts>
+				<AllPosts to="/blog">Read more articles</AllPosts>
 			</FeaturedText>
 			{data.allMarkdownRemark.edges.map(post => (
 				<FeaturedContainer key={post.node.id}>
 					<FeaturedContent>
-						<a key={post.node.id} href={post.node.frontmatter.path}>
+						<FeaturedLink key={post.node.id} to={post.node.frontmatter.path}>
 							<h2>{post.node.frontmatter.title}</h2>
-						</a>
+						</FeaturedLink>
 						<h5>
 							Posted on {post.node.frontmatter.date} -{' '}
 							{post.node.frontmatter.category}

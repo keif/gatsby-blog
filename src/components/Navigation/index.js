@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
 const Navbar = styled.ul`
 	list-style: none;
@@ -17,16 +18,16 @@ const NavigationItem = styled.li`
 	}
 `
 
-const NavigationLink = styled.a`
+const NavigationLink = styled(Link)`
 	color: #dd390f;
 `
 const Navigation = () => (
 	<Navbar>
 		<NavigationItem>
-			<NavigationLink href="/about">About</NavigationLink>
+			<NavigationLink to="/about">About</NavigationLink>
 		</NavigationItem>
 		<NavigationItem>
-			<NavigationLink href="/blog">Blog</NavigationLink>
+			<NavigationLink to="/blog">Blog</NavigationLink>
 		</NavigationItem>
 	</Navbar>
 )

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
 const IntroSection = styled.section`
 	&:before {
@@ -56,7 +57,7 @@ const IntroText = styled.p`
 	color: #696969;
 `
 
-const AllPosts = styled.a`
+const AllPosts = styled(Link)`
 	color: #dd390f;
 	float: right;
 	padding: 10px 0;
@@ -87,7 +88,7 @@ const Intro = () => (
 				doing anything else. I'm currently focussed on improving my React skills
 				and building great websites with User Experience in mind.
 			</IntroText>
-			<AllPosts href="/about">Read the full bio</AllPosts>
+			<AllPosts to="/about">Read the full bio</AllPosts>
 		</IntroContainer>
 	</IntroSection>
 )

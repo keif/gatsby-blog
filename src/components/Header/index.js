@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import logo from '../../assets/logo.svg'
 import Navigation from '../Navigation'
+import Link from 'gatsby-link'
 
 const MainHeader = styled.section`
 	background: white;
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
 	}
 `
 
-const Logo = styled.a`
+const Logo = styled(Link)`
 	line-height: 0;
 	img {
 		width: 30px;
@@ -35,7 +36,7 @@ const Logo = styled.a`
 const Header = () => (
 	<MainHeader>
 		<Wrapper>
-			<Logo href="/">
+			<Logo to="/">
 				<img src={logo} alt="Logo" />
 			</Logo>
 			<Navigation />
