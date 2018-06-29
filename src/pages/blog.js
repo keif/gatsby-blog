@@ -17,9 +17,8 @@ const Blog = styled.div`
 	display: grid;
 	grid-template-columns: auto;
 	grid-column: 3;
-	grid-gap: 10px;
+	grid-gap: 30px;
 	list-style: none;
-	max-width: 960px;
 `
 
 const BlogItem = styled.li`
@@ -41,10 +40,11 @@ const BlogTitle = styled.a`
 const BlogPage = ({ data }) => (
 	<div
 		style={{
-			paddingLeft: '100px',
+			margin: '60px auto',
+			maxWidth: '1200px',
+			width: '100%',
 		}}
 	>
-		<Navigation />
 		<Title>Blog posts</Title>
 		<Header>
 			<Blog>

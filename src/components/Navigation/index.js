@@ -3,19 +3,22 @@ import styled from 'styled-components'
 
 const Navbar = styled.ul`
 	list-style: none;
-	margin: 50px 0 100px 0;
 	display: flex;
 	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin: 0;
 `
 
 const NavigationItem = styled.li`
-	margin-right: 30px;
+	margin: 0 30px 0 0;
+	&:last-child {
+		margin-right: 0;
+	}
 `
 
 const NavigationLink = styled.a`
-	color: #fb5235;
+	color: #dd390f;
 `
 const Navigation = () => (
 	<Navbar>

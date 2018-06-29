@@ -3,11 +3,8 @@ import styled from 'styled-components'
 import Navigation from '../components/Navigation'
 
 const Intro = styled.section`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	max-width: 960px;
-	margin-left: 100px;
+	max-width: 1200px;
+	margin: 60px auto;
 	a {
 		align-self: flex-start;
 	}
@@ -23,7 +20,6 @@ const IntroText = styled.p`
 
 const AboutPage = () => (
 	<Intro>
-		<Navigation />
 		<IntroHeading>About me</IntroHeading>
 		<IntroText>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

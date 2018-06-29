@@ -1,50 +1,119 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navigation from '../components/Navigation'
+import Intro from '../components/Intro'
 
-const Intro = styled.section`
-	max-height: 450px;
-	padding-left: 100px;
-	display: flex;
-	flex-direction: column;
-	background-color: #fcfcfc;
-	background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23ececec' fill-opacity='0.6' fill-rule='evenodd'/%3E%3C/svg%3E");
-	a {
-		align-self: flex-start;
+const Featured = styled.section`
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 0.3fr 1fr;
+	grid-column-gap: 50px;
+	padding: 30px 0;
+	@media (max-width: 1200px) {
+		padding: 0 15px;
+	}
+
+	@media (max-width: 780px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 30% 70%;
+		grid-row-gap: 30px;
 	}
 `
 
-const IntroHeading = styled.h1`
-	position: relative;
-	max-width: 800px;
-	margin-bottom: 0;
-	color: #dd390f;
-`
-const IntroSubHeading = styled.h1`
-	position: relative;
-	max-width: 800px;
-	margin-bottom: 0;
-	color: #696969;
-	&:after {
-		content: '';
-		display: block;
-		width: 160px;
-		height: 3px;
-		background-color: #dd390f;
-		margin-top: 20px;
+const FeaturedContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 0 9px #f2f2f2de;
+	border-radius: 20px;
+
+	@media (max-width: 780px) {
+		flex-direction: column-reverse;
 		margin-bottom: 30px;
 	}
 `
-const IntroText = styled.p`
-	max-width: 700px;
-	margin-bottom: 0;
-	color: #696969;
+
+const FeaturedContent = styled.div`
+	max-width: 60%;
+	padding: 40px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap-reverse;
+
+	@media (max-width: 780px) {
+		max-width: 100%;
+	}
+
+	a {
+		color: #dd390f;
+	}
+	h2 {
+		margin-bottom: 0;
+		max-width: 100%;
+	}
+	h5 {
+		margin: 20px 0;
+		color: #cfcfcf;
+		font-weight: normal;
+	}
+	p {
+		color: #696969;
+		margin-bottom: 20px;
+	}
+	button {
+		position: absolute;
+		bottom: 40px;
+		border: none;
+		border-radius: 20px;
+		padding: 10px 25px;
+		background-color: #dd390f;
+		color: white;
+		text-transform: uppercase;
+		font-family: 'Raleway', serif;
+		letter-spacing: 1px;
+		cursor: pointer;
+	}
+`
+
+const FeaturedText = styled.div`
+	display: flex;
+	flex-direction: column;
+	h3 {
+		position: relative;
+		margin-bottom: 0;
+		color: #696969;
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 3px;
+			max-width: 120px;
+			background-color: #dd390f;
+			margin: 20px 0;
+		}
+	}
+	p {
+		color: #696969;
+		margin-bottom: 0;
+	}
+`
+
+const FeaturedImage = styled.div`
+	width: 100%;
+	border-radius: 0 20px 20px 0;
+	@media (max-width: 780px) {
+		height: 200px;
+		border-radius: 20px 20px 0 0;
+		margin-top: -30px;
+	}
 `
 
 const AllPosts = styled.a`
 	color: #dd390f;
-	float: right;
-	padding: 10px 0;
 	border: 1px solid transparent;
 	transition: all 0.5s ease-in;
 	background: transparent;
@@ -53,37 +122,53 @@ const AllPosts = styled.a`
 		content: '→';
 		font-size: 25px;
 		display: inline-block;
-		color: #fb5235;
+		color: #dd390f;
 		padding-left: 0.5em;
 	}
 `
 
 const IndexPage = ({ data }) => (
 	<div>
-		<Intro>
-			<Navigation />
-			<IntroHeading>WEB DEVELOPER.</IntroHeading>
-			<IntroSubHeading>TECH AND SCIENCE ENTHUSIAST.</IntroSubHeading>
-			<IntroText>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum.
-			</IntroText>
-			<AllPosts href="/about">Read more</AllPosts>
-		</Intro>
+		<Intro />
+		<Featured>
+			<FeaturedText>
+				<h3>Featured article</h3>
+				<p>
+					Once a month I will publish a featured article. These articles will
+					usually tackle subjects I find more meaningful and important.
+				</p>
+				<AllPosts href="/blog">Read more articles</AllPosts>
+			</FeaturedText>
+			{data.allMarkdownRemark.edges.map(post => (
+				<FeaturedContainer key={post.node.id}>
+					<FeaturedContent>
+						<a key={post.node.id} href={post.node.frontmatter.path}>
+							<h2>{post.node.frontmatter.title}</h2>
+						</a>
+						<h5>
+							Posted on {post.node.frontmatter.date} -{' '}
+							{post.node.frontmatter.category}
+						</h5>
+						<p>{post.node.excerpt}</p>
+					</FeaturedContent>
+					<FeaturedImage
+						style={{
+							backgroundImage: `url(${post.node.frontmatter.url}`,
+							backgroundSize: 'cover',
+						}}
+					/>
+				</FeaturedContainer>
+			))}
+		</Featured>
 	</div>
 )
 
 export const pageQuery = graphql`
 	query IndexQuery {
 		allMarkdownRemark(
-			limit: 3
+			limit: 1
 			sort: { fields: [frontmatter___date], order: DESC }
-			filter: { frontmatter: { published: { eq: true } } }
+			filter: { frontmatter: { featured: { eq: true } } }
 		) {
 			edges {
 				node {
@@ -94,6 +179,8 @@ export const pageQuery = graphql`
 						path
 						published
 						date
+						category
+						url
 					}
 				}
 			}

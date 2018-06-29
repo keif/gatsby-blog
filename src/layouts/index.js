@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import favIcon from '../assets/favicon.png'
 
 import Header from '../components/Header'
 
@@ -9,7 +10,8 @@ const TemplateWrapper = ({ children }) => (
 		style={{
 			display: 'grid',
 			height: '100vh',
-			gridTemplateColumns: '60px 1fr',
+			gridTemplateColumns: '1fr',
+			gridTemplateRows: '60px 1fr',
 		}}
 	>
 		<Helmet
@@ -22,11 +24,12 @@ const TemplateWrapper = ({ children }) => (
 						'front-end, design, developer, minimal, gatsby, stefan, ivic, ivić',
 				},
 			]}
+			link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favIcon}` }]}
 		>
 			<html lang="en" />
 		</Helmet>
 		<Header />
-		<div>{children()}</div>
+		{children()}
 	</div>
 )
 

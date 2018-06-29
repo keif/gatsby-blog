@@ -1,27 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from '../../assets/logo.svg'
+import Navigation from '../Navigation'
 
 const MainHeader = styled.section`
-	background: #dd390f;
+	background: white;
+	box-shadow: 0px 2px 15px 0px #f2f2f2de;
+	z-index: 1;
 `
 
 const Wrapper = styled.div`
-	max-width: 960px;
+	height: 100%;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media (max-width: 1200px) {
+		padding: 0 15px;
+	}
 `
 
 const Logo = styled.a`
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	line-height: 0;
 	img {
 		width: 30px;
-		height: 20px;
-		margin: 60px 0;
+		height: auto;
+		margin-bottom: 0;
 	}
 `
 
@@ -31,6 +38,7 @@ const Header = () => (
 			<Logo href="/">
 				<img src={logo} alt="Logo" />
 			</Logo>
+			<Navigation />
 		</Wrapper>
 	</MainHeader>
 )
