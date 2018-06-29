@@ -154,7 +154,7 @@ const IndexPage = ({ data }) => (
 					</FeaturedContent>
 					<FeaturedImage
 						style={{
-							backgroundImage: `url(${post.node.frontmatter.url}`,
+							backgroundImage: `url(${post.node.frontmatter.url})`,
 							backgroundSize: 'cover',
 						}}
 					/>
