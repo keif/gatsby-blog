@@ -54,15 +54,18 @@ export default function Template({ data }) {
 	const BlogText = styled.div`
 		h1 {
 			text-align: center;
+			margin: 50px 0;
 		}
-		p {
+		p,
+		pre,
+		code {
 			max-width: 960px;
-			margin: 20px auto;
+			margin: 20px auto !important;
 			color: #696969;
 		}
 		img {
 			width: 100%;
-			margin: 0 auto;
+			margin: 20px auto;
 		}
 	`
 
