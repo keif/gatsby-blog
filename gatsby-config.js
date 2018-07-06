@@ -3,6 +3,7 @@ module.exports = {
 		title: 'Personal blog',
 	},
 	plugins: [
+		'gatsby-plugin-webpack-bundle-analyzer',
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sass`,
 		{

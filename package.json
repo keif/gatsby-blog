@@ -7,18 +7,11 @@
     "gatsby": "^1.9.236",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
-    "gatsby-plugin-sass": "^1.0.23",
-    "gatsby-plugin-styled-components": "^2.0.9",
-    "gatsby-remark-prismjs": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.27",
-    "gatsby-transformer-remark": "^1.7.37",
     "prismjs": "^1.15.0",
-    "react-helmet": "^5.2.0",
-    "styled-components": "^3.2.3"
+    "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -29,6 +22,12 @@
   "devDependencies": {
     "gatsby-plugin-typography": "^1.7.18",
     "prettier": "^1.11.1",
-    "typography-theme-ocean-beach": "^0.15.11"
+    "typography-theme-ocean-beach": "^0.15.11",
+    "styled-components": "^3.2.3",
+    "gatsby-plugin-sass": "^1.0.23",
+    "gatsby-plugin-styled-components": "^2.0.9",
+    "gatsby-plugin-webpack-bundle-analyzer": "^0.1.1",
+    "gatsby-remark-prismjs": "^2.0.4",
+    "gatsby-transformer-remark": "^1.7.37"
   }
 }
