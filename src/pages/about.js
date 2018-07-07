@@ -15,10 +15,21 @@ const Intro = styled.section`
 
 const IntroHeading = styled.h1`
   position: relative;
+  color: #696969;
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    max-width: 120px;
+    background-color: #dd390f;
+    margin: 20px 0 50px;
+  }
 `;
 const IntroText = styled.p`
   line-height: 1.7em;
   margin-bottom: 1em;
+  color: #696969;
 `;
 
 const AboutPage = () => (

@@ -11,6 +11,16 @@ const Header = styled.div`
 const Title = styled.h1`
   font-weight: normal;
   position: relative;
+  color: #696969;
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    max-width: 120px;
+    background-color: #dd390f;
+    margin: 20px 0 50px;
+  }
 `;
 
 const Blog = styled.div`
@@ -33,6 +43,9 @@ const BlogContainer = styled.div`
 const BlogItem = styled.li`
   display: flex;
   flex-direction: column;
+  p {
+    color: #696969;
+  }
 `;
 
 const BlogDate = styled.span`
@@ -42,7 +55,7 @@ const BlogDate = styled.span`
 const BlogTitle = styled(Link)`
   margin: 0 0 0.5em;
   font-size: 1.5rem;
-  color: #fb5235;
+  color: #dd390f;
   font-weight: bold;
 `;
 
