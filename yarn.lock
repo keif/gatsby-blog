@@ -8891,6 +8891,14 @@ type-of@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/type-of/-/type-of-2.0.1.tgz#e72a1741896568e9f628378d816d6912f7f23972"
 
+typeface-raleway@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-raleway/-/typeface-raleway-0.0.54.tgz#f166c517becc81f34d14e72736d28b8923c79c65"
+
+typeface-roboto-slab@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-roboto-slab/-/typeface-roboto-slab-0.0.54.tgz#dc96cdd9b4794f3a9bc5fef030c06b2c252ca4a7"
+
 typography-breakpoint-constants@^0.15.10:
   version "0.15.10"
   resolved "https://registry.yarnpkg.com/typography-breakpoint-constants/-/typography-breakpoint-constants-0.15.10.tgz#bd5308dd57250e7f28a8c6e1c0e668ddf1178c5c"

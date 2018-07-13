@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import favIcon from "../assets/favicon.png";
 import Header from "../components/Header";
+
 require("prismjs/themes/prism-solarizedlight.css");
+require("typeface-raleway");
+require("typeface-roboto-slab");
+
 import css from "../assets/app.css";
 
 const TemplateWrapper = ({ children }) => (

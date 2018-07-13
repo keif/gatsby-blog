@@ -5,17 +5,7 @@ const typography = new Typography({
   baseLineHeight: 1.7,
   headerFontFamily: ["Raleway", "sans-serif"],
   bodyFontFamily: ["Roboto Slab", "sans-serif"],
-  scaleRatio: 3,
-  googleFonts: [
-    {
-      name: "Raleway",
-      styles: ["700", "600"]
-    },
-    {
-      name: "Roboto Slab",
-      styles: ["400"]
-    }
-  ]
+  scaleRatio: 3
 });
 
 export default typography;
