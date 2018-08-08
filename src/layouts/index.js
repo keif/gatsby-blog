@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import favIcon from "../assets/favicon.png";
-import Header from "../components/Header";
+import Navigation from "../components/Navigation";
 
 require("prismjs/themes/prism-solarizedlight.css");
 require("typeface-raleway");
@@ -33,7 +33,7 @@ const TemplateWrapper = ({ children }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Header />
+    <Navigation />
     {children()}
   </div>
 );

@@ -1,81 +1,22 @@
 import React from "react";
-import styled from "styled-components";
-import Link from "gatsby-link";
-
-const Header = styled.div`
-  margin: 1.45rem 0;
-  height: auto;
-  width: 100%;
-`;
-
-const Title = styled.h1`
-  font-weight: normal;
-  position: relative;
-  color: #696969;
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    max-width: 120px;
-    background-color: #dd390f;
-    margin: 20px 0 50px;
-  }
-`;
-
-const Blog = styled.div`
-  display: grid;
-  grid-template-columns: auto;
-  grid-column: 3;
-  grid-gap: 30px;
-  list-style: none;
-`;
-
-const BlogContainer = styled.div`
-  margin: 60px auto;
-  max-width: 1200px;
-  width: 100%;
-  @media (max-width: 1200px) {
-    padding: 0 15px;
-  }
-`;
-
-const BlogItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  p {
-    color: #696969;
-  }
-`;
-
-const BlogDate = styled.span`
-  font-size: 0.8em;
-`;
-
-const BlogTitle = styled(Link)`
-  margin: 0 0 0.5em;
-  font-size: 1.5rem;
-  color: #dd390f;
-  font-weight: bold;
-`;
+import { Title, Text, Container } from "../blocks/Common";
+import Blog from "../blocks/Blog";
 
 const BlogPage = ({ data }) => (
-  <BlogContainer>
+  <Container>
     <Title>Blog posts</Title>
-    <Header>
-      <Blog>
-        {data.allMarkdownRemark.edges.map(post => (
-          <BlogItem key={post.node.id}>
-            <BlogDate>{post.node.frontmatter.date}</BlogDate>
-            <BlogTitle key={post.node.id} to={post.node.frontmatter.path}>
-              {post.node.frontmatter.title}
-            </BlogTitle>
-            <p>{post.node.excerpt}</p>
-          </BlogItem>
-        ))}
-      </Blog>
-    </Header>
-  </BlogContainer>
+    <Blog>
+      {data.allMarkdownRemark.edges.map(post => (
+        <Blog.Item key={post.node.id}>
+          <Blog.Date>{post.node.frontmatter.date}</Blog.Date>
+          <Blog.Title key={post.node.id} to={post.node.frontmatter.path}>
+            {post.node.frontmatter.title}
+          </Blog.Title>
+          <p>{post.node.excerpt}</p>
+        </Blog.Item>
+      ))}
+    </Blog>
+  </Container>
 );
 
 export const pageQuery = graphql`
