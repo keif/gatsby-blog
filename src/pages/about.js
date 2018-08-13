@@ -6,28 +6,28 @@ const AboutPage = () => (
     <Title>About me</Title>
     <Text
       style={{
-        maxWidth: "1200px"
+        maxWidth: "960px"
       }}
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-      do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-      do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      <h4>Hi, I am Stefan.</h4>
+      <p>
+        I am a Web Developer with a strong focus on performance and
+        scale-ability of web applications. I love utilizing User Experience
+        research to craft good designs and apply them with code.
+      </p>
+      <p>
+        I take part in the open source community where I can use the latest
+        technologies and best practices.
+      </p>
+      <p>
+        With a curious mindset, I talk about science, tech and food. I am
+        capable of recalling lines from popular movies at exactly the right time
+        for a good comedic moment.
+      </p>
+      <p>
+        I write blog posts and my latest interest is in helping beginners learn
+        more about the web.
+      </p>
     </Text>
   </Container>
 );

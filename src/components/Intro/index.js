@@ -11,14 +11,12 @@ const Intro = () => (
         TECH AND SCIENCE ENTHUSIAST.
       </IntroSection.SubHeading>
       <Text>
-        Usually here you could read that the person is an award wining developer
-        or designer. That he is a fullstack ninja rockstar developer able to
-        solve all your problems. So if you are looking for one, sorry, you are
-        in a wrong place. To be honest, right now, I tend to break more then I
-        fix. But that doesn't stop me from being highly motivated and very eager
-        to learn. Ever since I was 13 I haven't been able to imagine myself
-        doing anything else. I'm currently focussed on improving my React skills
-        and building great websites with User Experience in mind.
+        I am a Web Developer with a strong focus on performance and
+        scale-ability of web applications. I love utilizing User Experience
+        research to craft good designs and apply them with code. I take part in
+        the open source community where I can use the latest technologies and
+        best practices. I write blog posts and my latest interest is in helping
+        beginners learn more about the web.
       </Text>
       <Link to="/about">Read the full bio</Link>
     </IntroSection.Wrapper>
