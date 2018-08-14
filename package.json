@@ -35,6 +35,7 @@
     "gatsby-plugin-styled-components": "^2.0.9",
     "gatsby-plugin-typography": "^1.7.18",
     "gatsby-plugin-webpack-bundle-analyzer": "^0.1.1",
+    "gatsby-remark-embed-youtube": "0.0.7",
     "gatsby-remark-prismjs": "^2.0.4",
     "gatsby-transformer-remark": "^1.7.37",
     "jest": "23.5.0",
