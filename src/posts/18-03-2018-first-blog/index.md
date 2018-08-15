@@ -17,9 +17,7 @@ No matter how good the design was, there was always that once piece missing. It 
 This blog has two purposes:
 To help me visualize my maturity as a developer and a person.
 To help those that feel lost and confused building the web.
-My plan is to share both my experiences and knowledge with you but also to get some from you too. This blog is all going to be all about giving and receiving.
-
-`youtube:https://www.youtube.com/watch?v=HTjqz0_wsZo`
+My plan is to share both my experiences and knowledge with you but also to get some from you too.
 
 ### What kind of topics will you write about ?
 
