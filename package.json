@@ -4,12 +4,19 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-react-helmet": "^2.0.8",
-    "gatsby-source-filesystem": "^1.5.39",
+    "babel-jest": "^23.4.2",
+    "babel-plugin-styled-components": "^1.5.1",
+    "gatsby": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-source-filesystem": "next",
     "prismjs": "^1.15.0",
-    "react-helmet": "^5.2.0"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "typeface-raleway": "^0.0.54",
+    "typeface-roboto-slab": "^0.0.54",
+    "typography": "^0.16.17"
   },
   "keywords": [
     "gatsby"
@@ -19,9 +26,11 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "jest"
+    "test": "jest --config jest.config.js --no-cache"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "5.3.0",
     "eslint-config-airbnb": "17.0.0",
     "eslint-config-prettier": "2.9.0",
@@ -31,21 +40,17 @@
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-react": "7.10.0",
     "expect-puppeteer": "3.2.0",
-    "gatsby-plugin-sass": "^1.0.26",
-    "gatsby-plugin-styled-components": "^2.0.9",
-    "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-plugin-styled-components": "next",
+    "gatsby-plugin-typography": "next",
     "gatsby-plugin-webpack-bundle-analyzer": "^0.1.1",
-    "gatsby-remark-embed-youtube": "0.0.7",
-    "gatsby-remark-prismjs": "^2.0.4",
-    "gatsby-transformer-remark": "^1.7.37",
+    "gatsby-remark-prismjs": "next",
+    "gatsby-transformer-remark": "next",
     "jest": "23.5.0",
     "jest-config": "23.5.0",
     "jest-puppeteer": "3.2.1",
     "prettier": "1.14.2",
     "puppeteer": "1.7.0",
     "styled-components": "^3.2.3",
-    "typeface-raleway": "^0.0.54",
-    "typeface-roboto-slab": "^0.0.54",
     "typography-theme-ocean-beach": "^0.15.11"
   }
 }

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const Typo = styled.div``;
+
 const IntroHeading = styled.h1`
   position: relative;
   max-width: 800px;
@@ -20,4 +22,8 @@ const IntroSubHeading = styled.h1`
     margin: 30px 0;
   }
 `;
-export default { IntroHeading, IntroSubHeading };
+
+Typo.IntroHeading = IntroHeading;
+Typo.IntroSubHeading = IntroSubHeading;
+
+export default Typo;

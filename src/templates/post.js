@@ -1,11 +1,13 @@
 import React from "react";
+import { graphql } from "gatsby";
 import BlogPage from "../blocks/Post";
+import Layout from "../components/layout";
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
 
   return (
-    <div>
+    <Layout>
       <BlogPage>
         <BlogPage.Info>
           <BlogPage.Date>{post.frontmatter.date}</BlogPage.Date>
@@ -21,7 +23,7 @@ export default function Template({ data }) {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </BlogPage.Text>
       </BlogPage>
-    </div>
+    </Layout>
   );
 }
 

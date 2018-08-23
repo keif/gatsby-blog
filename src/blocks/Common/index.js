@@ -30,4 +30,10 @@ const Container = styled.div`
   }
 `;
 
-export default { Title, Text, Container };
+const Common = styled.div``;
+
+Common.Title = Title;
+Common.Text = Text;
+Common.Container = Container;
+
+export default Common;

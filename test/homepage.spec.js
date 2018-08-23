@@ -1,3 +1,5 @@
+import "babel-polyfill";
+
 const { setDefaultOptions } = require("expect-puppeteer");
 const puppeteer = require("puppeteer");
 const { port } = require("../jest-puppeteer.config").server;

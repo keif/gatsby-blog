@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 
 const BlogTitle = styled(Link)`
   margin: 0 0 0.5em;

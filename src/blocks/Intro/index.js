@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import Wrapper from "./Wrapper";
-import { IntroHeading, IntroSubHeading } from "./Typo";
+import Typo from "./Typo";
 
 const IntroSection = styled.section`
   &:before {
@@ -21,7 +21,7 @@ const IntroSection = styled.section`
 `;
 
 IntroSection.Wrapper = Wrapper;
-IntroSection.Heading = IntroHeading;
-IntroSection.SubHeading = IntroSubHeading;
+IntroSection.Heading = Typo.IntroHeading;
+IntroSection.SubHeading = Typo.IntroSubHeading;
 
 export default IntroSection;

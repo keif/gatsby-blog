@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import link from "gatsby-link";
+import { Link } from "gatsby";
 
-const Link = styled(link)`
+const Links = styled(Link)`
   color: #dd390f;
   float: right;
   padding: 10px 0;
@@ -18,4 +18,4 @@ const Link = styled(link)`
   }
 `;
 
-export default Link;
+export default Links;

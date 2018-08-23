@@ -1,10 +1,13 @@
 import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+
 import Intro from "../components/Intro";
-import Link from "../blocks/Link";
+import Links from "../blocks/Link";
 import Featured from "../blocks/Featured";
 
 const IndexPage = ({ data }) => (
-  <div>
+  <Layout>
     <Intro />
     <Featured>
       <Featured.Text>
@@ -13,7 +16,7 @@ const IndexPage = ({ data }) => (
           Once a month I will publish a featured article. These articles will
           usually tackle subjects I find more meaningful and important.
         </p>
-        <Link to="/blog">Read more articles</Link>
+        <Links to="/blog">Read more articles</Links>
       </Featured.Text>
       {data.allMarkdownRemark.edges.map(post => (
         <Featured.Container key={post.node.id}>
@@ -36,7 +39,7 @@ const IndexPage = ({ data }) => (
         </Featured.Container>
       ))}
     </Featured>
-  </div>
+  </Layout>
 );
 
 export const pageQuery = graphql`

@@ -3,9 +3,7 @@ module.exports = {
     title: "Personal blog"
   },
   plugins: [
-    "gatsby-plugin-webpack-bundle-analyzer",
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,13 +22,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: "gatsby-remark-embed-youtube",
-            options: {
-              width: 960,
-              height: 600
-            }
-          },
           {
             resolve: `gatsby-remark-prismjs`,
             classPrefix: "language-",

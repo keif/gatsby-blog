@@ -1,22 +1,26 @@
 import React from "react";
-import { Title, Text, Container } from "../blocks/Common";
+import { graphql } from "gatsby";
+import Common from "../blocks/Common";
 import Blog from "../blocks/Blog";
+import Layout from "../components/layout";
 
 const BlogPage = ({ data }) => (
-  <Container>
-    <Title>Blog posts</Title>
-    <Blog>
-      {data.allMarkdownRemark.edges.map(post => (
-        <Blog.Item key={post.node.id}>
-          <Blog.Date>{post.node.frontmatter.date}</Blog.Date>
-          <Blog.Title key={post.node.id} to={post.node.frontmatter.path}>
-            {post.node.frontmatter.title}
-          </Blog.Title>
-          <p>{post.node.excerpt}</p>
-        </Blog.Item>
-      ))}
-    </Blog>
-  </Container>
+  <Layout>
+    <Common.Container>
+      <Common.Title>Blog posts</Common.Title>
+      <Blog>
+        {data.allMarkdownRemark.edges.map(post => (
+          <Blog.Item key={post.node.id}>
+            <Blog.Date>{post.node.frontmatter.date}</Blog.Date>
+            <Blog.Title key={post.node.id} to={post.node.frontmatter.path}>
+              {post.node.frontmatter.title}
+            </Blog.Title>
+            <p>{post.node.excerpt}</p>
+          </Blog.Item>
+        ))}
+      </Blog>
+    </Common.Container>
+  </Layout>
 );
 
 export const pageQuery = graphql`
