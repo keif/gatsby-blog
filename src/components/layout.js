@@ -16,7 +16,7 @@ const TemplateWrapper = ({ children }) => (
       display: "grid",
       height: "100vh",
       gridTemplateColumns: "100%",
-      gridTemplateRows: "60px 1fr"
+      gridTemplateRows: "60px 600px 400px"
     }}
   >
     <Helmet
