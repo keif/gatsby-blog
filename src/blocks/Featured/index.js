@@ -12,8 +12,9 @@ const Featured = styled.section`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 300px;
   grid-column-gap: 50px;
-  padding: 30px 0;
+  padding: 0 0 30px;
   @media (max-width: 1200px) {
     padding: 0 15px;
   }
