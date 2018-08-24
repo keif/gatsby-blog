@@ -1,14 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import PropTypes from "prop-types";
 import favIcon from "../assets/favicon.png";
 import Navigation from "./Navigation";
+import css from "../assets/app.css";
 
 require("prismjs/themes/prism-solarizedlight.css");
 require("typeface-raleway");
 require("typeface-roboto-slab");
-
-import css from "../assets/app.css";
 
 const TemplateWrapper = ({ children }) => (
   <div
@@ -36,5 +35,12 @@ const TemplateWrapper = ({ children }) => (
     {children}
   </div>
 );
+
+TemplateWrapper.propTypes = {
+  children: PropTypes.func
+};
+TemplateWrapper.defaultProps = {
+  children: null
+};
 
 export default TemplateWrapper;

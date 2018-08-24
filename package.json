@@ -10,10 +10,12 @@
     "gatsby-plugin-react-helmet": "next",
     "gatsby-source-filesystem": "next",
     "prismjs": "^1.15.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
+    "styled-components": "^3.2.3",
     "typeface-raleway": "^0.0.54",
     "typeface-roboto-slab": "^0.0.54",
     "typography": "^0.16.17"
@@ -50,7 +52,6 @@
     "jest-puppeteer": "3.2.1",
     "prettier": "1.14.2",
     "puppeteer": "1.7.0",
-    "styled-components": "^3.2.3",
     "typography-theme-ocean-beach": "^0.15.11"
   }
 }

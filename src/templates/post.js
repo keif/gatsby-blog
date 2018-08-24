@@ -29,6 +29,13 @@ export default function Template({ data }) {
   );
 }
 
+Template.propTypes = {
+  data: PropTypes.func
+};
+Template.defaultProps = {
+  data: null
+};
+
 export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
