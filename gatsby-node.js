@@ -3,8 +3,6 @@ const path = require("path");
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const postTemplate = path.resolve("src/templates/post.js");
-
   return graphql(`
     {
       allMarkdownRemark {
@@ -13,6 +11,7 @@ exports.createPages = ({ actions, graphql }) => {
             html
             id
             frontmatter {
+              page
               path
               title
               date
@@ -26,10 +25,19 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(res.errors);
     }
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: postTemplate
-      });
+      if (node.frontmatter.page) {
+        createPage({
+          path: node.frontmatter.path,
+          component: path.resolve("src/templates/about.js"),
+          layout: "about"
+        });
+      } else {
+        createPage({
+          path: node.frontmatter.path,
+          component: path.resolve("src/templates/post.js"),
+          layout: "post"
+        });
+      }
     });
   });
 };
