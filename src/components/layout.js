@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import PropTypes from "prop-types";
 import favIcon from "../assets/favicon.png";
 import Navigation from "./Navigation";
-import css from "../assets/app.css";
+import "../assets/app.css";
 
 require("prismjs/themes/prism-solarizedlight.css");
 require("typeface-raleway");
