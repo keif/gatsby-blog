@@ -4,19 +4,18 @@ title: "About me"
 page: true
 ---
 
-Hi, I am Stefan. I like to build things, spend time debugging stuff and most of all, learn from my mistakes.
-
-Unfortunately.
+Hi, I am Stefan. I like to build things, spend time debugging stuff and most of all, learn from my mistakes. Unfortunately.
 
 I enjoy designing user interfaces. Combining both user experience research and accessibility.
-
 I am a big fan of tech and science, with passion for Astronomy.
+
 
 #### So, when did you start getting involved with programming ? 
 
 I would say when I was about 13 years old. At the time I was a part of a gaming community in WoW and my first project involved creating a simple forum in phpBB. I found it very difficult but I enjoyed every second of doing it. Since then, if someone asked me what I wanted to do in life, the answer was always the same. Programming.
 
 When I was about 18 the term programmer changed into a web developer. Before that I have spent some time learning C# and later Java. But I would always return to HTML, CSS and JavaScript.
+
 
 #### Why front-end ?
 
@@ -25,6 +24,7 @@ I tried both back-end and front-end before I made my decision. I found back-end 
 I have spent time working on something that was very important for the website, but no one would every know. While front-end let me build the actual interface people would interact with.
 
 It felt so rewarding, it made me feel good.
+
 
 #### How do you plan to move forward with your career ?
 
