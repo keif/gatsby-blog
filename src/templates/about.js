@@ -22,13 +22,6 @@ export default function Template({ data }) {
   );
 }
 
-Template.propTypes = {
-  data: PropTypes.func
-};
-Template.defaultProps = {
-  data: null
-};
-
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
