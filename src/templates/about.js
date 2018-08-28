@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Common from "../blocks/Common";
 import Layout from "../components/layout";
@@ -13,7 +12,8 @@ export default function Template({ data }) {
         <Common.Title>{frontmatter.title}</Common.Title>
         <div
           style={{
-            maxWidth: "960px"
+            maxWidth: "960px",
+            color: "#696969"
           }}
           dangerouslySetInnerHTML={{ __html: html }}
         />
