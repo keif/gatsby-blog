@@ -11,7 +11,7 @@ export default function Template({ data }) {
     <Layout>
       <Common.Container>
         <Common.Title>{frontmatter.title}</Common.Title>
-        <Common.Text
+        <div
           style={{
             maxWidth: "960px"
           }}
