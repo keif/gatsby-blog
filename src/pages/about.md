@@ -4,7 +4,7 @@ title: "About me"
 page: true
 ---
 
-Hi, I am Stefan. I like to build things, debug things, and, most of all, to keep learn.
+Hi, I am Stefan. I like to build things, debug things, and, most of all, to keep learning.
 
 I enjoy designing user interfaces. Combining both user experience research and accessibility.
 I am a big fan of tech and science, with passion for Astronomy.
